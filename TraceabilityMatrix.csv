@@ -1,0 +1,14 @@
+Requirement ID,Requirement,Acceptance Criteria,Manual Test ID,Automation Test ID,Test Type,Priority,Status
+REQ-01,User registration with valid details,Account is created and success confirmation is displayed,TC-M-01,TC-UI-01,UI,High,Implemented
+REQ-02,Registered user can log in,Valid credentials create an authenticated session,TC-M-02,TC-API-01,UI+API,High,Implemented
+REQ-03,User can add products to cart,Selected products appear in cart with correct quantities,TC-M-03,TC-UI-03,UI,High,Implemented
+REQ-04,User can update cart quantity,Updated quantity and subtotal are reflected,TC-M-03,TC-UI-03,UI,High,Implemented
+REQ-05,User can complete COD checkout,Valid billing data and COD payment allow checkout to proceed,TC-M-04,TC-UI-03,UI,High,Implemented
+REQ-06,Invoice is generated after checkout confirmation,Invoice has non-empty ID/number and total,TC-M-04,TC-UI-03,UI,High,Implemented
+REQ-07,Logout terminates authenticated session,Protected account route redirects unauthenticated user,TC-M-05,TC-UI-05,UI,Medium,Implemented
+REQ-08,Invalid login is rejected,Error is shown and no authenticated session is created,TC-M-06,TC-UI-06,UI+API,High,Implemented
+REQ-09,Duplicate registration email is rejected,Existing email cannot create a second account,TC-M-07,TC-API-05,UI+API,Medium,Implemented
+REQ-10,Product search returns relevant results,Search results contain the requested keyword,TC-M-08,TC-UI-02,UI,Medium,Implemented
+REQ-11,API product listing is available,Successful response contains at least one product,TC-A-02,TC-API-02,API,Medium,Implemented
+REQ-12,Cart API supports authenticated item creation,Cart and cart item operations return successful responses,TC-A-03,TC-API-03,API,High,Implemented
+REQ-13,Invoice API accepts the supported checkout payload,Invoice creation returns a valid invoice identifier,TC-A-03,TC-API-03,API,High,Needs live verification
