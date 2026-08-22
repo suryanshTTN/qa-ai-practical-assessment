@@ -1,0 +1,711 @@
+{
+  "config": {
+    "argv": [
+      "D:\\node\\node.exe",
+      "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\playwright.config.js",
+    "rootDir": "D:/qa-ai-practical-assessment (1)/qa-ai-practical-assessment/PrismStructure/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/qa-ai-practical-assessment (1)/qa-ai-practical-assessment/PrismStructure/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "ui",
+        "name": "ui",
+        "testDir": "D:/qa-ai-practical-assessment (1)/qa-ai-practical-assessment/PrismStructure/tests/ui",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/qa-ai-practical-assessment (1)/qa-ai-practical-assessment/PrismStructure/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "D:/qa-ai-practical-assessment (1)/qa-ai-practical-assessment/PrismStructure/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "execution-report/html-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "execution-report/results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ui\\e2e-purchase.spec.js",
+      "file": "ui/e2e-purchase.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Regression @regression",
+          "file": "ui/e2e-purchase.spec.js",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-UI-03 register, purchase via COD, invoice is generated @regression",
+              "ok": false,
+              "tags": [
+                "regression",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui",
+                  "projectName": "ui",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30782,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\BasePage.js",
+                            "column": 56,
+                            "line": 28
+                          },
+                          "message": "Error: locator.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"address\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\ui\\BasePage.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m   \u001b[36masync\u001b[39m fillTestId(testId\u001b[33m,\u001b[39m value) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`[data-test=\"${testId}\"]`\u001b[39m)\u001b[33m.\u001b[39mfill(value)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m   }\n \u001b[90m 30 |\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36masync\u001b[39m textOfTestId(testId) {\u001b[0m\n\u001b[2m    at RegisterPage.fillTestId (D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\BasePage.js:28:56)\u001b[22m\n\u001b[2m    at RegisterPage.register (D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\RegisterPage.js:13:16)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\tests\\ui\\e2e-purchase.spec.js:24:5)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1644:9)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:11)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1642:7)\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:17.561Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-de832-ice-is-generated-regression-ui\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-de832-ice-is-generated-regression-ui\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-de832-ice-is-generated-regression-ui\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-de832-ice-is-generated-regression-ui\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b58e20f33fd020af882b-9f747f04461f29724b83",
+              "file": "ui/e2e-purchase.spec.js",
+              "line": 12,
+              "column": 3
+            },
+            {
+              "title": "TC-UI-04 profile shows the name/email used at registration @regression",
+              "ok": false,
+              "tags": [
+                "regression",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui",
+                  "projectName": "ui",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30641,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\BasePage.js",
+                            "column": 56,
+                            "line": 28
+                          },
+                          "message": "Error: locator.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"address\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\ui\\BasePage.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m   \u001b[36masync\u001b[39m fillTestId(testId\u001b[33m,\u001b[39m value) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`[data-test=\"${testId}\"]`\u001b[39m)\u001b[33m.\u001b[39mfill(value)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m   }\n \u001b[90m 30 |\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36masync\u001b[39m textOfTestId(testId) {\u001b[0m\n\u001b[2m    at RegisterPage.fillTestId (D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\BasePage.js:28:56)\u001b[22m\n\u001b[2m    at RegisterPage.register (D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\RegisterPage.js:13:16)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\tests\\ui\\e2e-purchase.spec.js:57:5)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1644:9)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:11)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1642:7)\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:50.467Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-8e52b--at-registration-regression-ui\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-8e52b--at-registration-regression-ui\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-8e52b--at-registration-regression-ui\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-8e52b--at-registration-regression-ui\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b58e20f33fd020af882b-04e09d557ed2dae88cd1",
+              "file": "ui/e2e-purchase.spec.js",
+              "line": 48,
+              "column": 3
+            },
+            {
+              "title": "TC-UI-05 logout ends the session @regression",
+              "ok": false,
+              "tags": [
+                "regression",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui",
+                  "projectName": "ui",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30610,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\BasePage.js",
+                            "column": 56,
+                            "line": 28
+                          },
+                          "message": "Error: locator.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"address\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\ui\\BasePage.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m   \u001b[36masync\u001b[39m fillTestId(testId\u001b[33m,\u001b[39m value) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`[data-test=\"${testId}\"]`\u001b[39m)\u001b[33m.\u001b[39mfill(value)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m   }\n \u001b[90m 30 |\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36masync\u001b[39m textOfTestId(testId) {\u001b[0m\n\u001b[2m    at RegisterPage.fillTestId (D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\BasePage.js:28:56)\u001b[22m\n\u001b[2m    at RegisterPage.register (D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\pages\\ui\\RegisterPage.js:13:16)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\tests\\ui\\e2e-purchase.spec.js:73:5)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1644:9)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:11)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1642:7)\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:15:23.067Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-20b7e-ends-the-session-regression-ui\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-20b7e-ends-the-session-regression-ui\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-20b7e-ends-the-session-regression-ui\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\e2e-purchase-Regression-re-20b7e-ends-the-session-regression-ui\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b58e20f33fd020af882b-cd06540ba9dac1eca78e",
+              "file": "ui/e2e-purchase.spec.js",
+              "line": 66,
+              "column": 3
+            },
+            {
+              "title": "TC-UI-06 invalid password is rejected with a visible error @regression",
+              "ok": true,
+              "tags": [
+                "regression",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui",
+                  "projectName": "ui",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3757,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:15:55.519Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b58e20f33fd020af882b-7f7de962de127d437067",
+              "file": "ui/e2e-purchase.spec.js",
+              "line": 85,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui\\smoke.spec.js",
+      "file": "ui/smoke.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Smoke @smoke",
+          "file": "ui/smoke.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-UI-01 homepage loads and shows products @smoke",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui",
+                  "projectName": "ui",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5881,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:17.083Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-6bacc0e138c864c5e7b3",
+              "file": "ui/smoke.spec.js",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "TC-UI-02 search returns relevant results @smoke",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui",
+                  "projectName": "ui",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 6329,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:23.522Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-08b7103b6beb5c22d51d",
+              "file": "ui/smoke.spec.js",
+              "line": 11,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api\\auth-cart-invoice.spec.js",
+      "file": "api/auth-cart-invoice.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API Smoke @smoke",
+          "file": "api/auth-cart-invoice.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-API-01 register then login returns a bearer token @smoke",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1556,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:17.558Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "30003205f14100cbf40a-e546c41457e27f3baede",
+              "file": "api/auth-cart-invoice.spec.js",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "TC-API-02 product listing returns products @smoke",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 588,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:19.202Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "30003205f14100cbf40a-e04ffea3bb1d70db85f2",
+              "file": "api/auth-cart-invoice.spec.js",
+              "line": 24,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "API Regression @regression",
+          "file": "api/auth-cart-invoice.spec.js",
+          "line": 34,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-API-03 full cart-to-invoice flow with a bearer token @regression",
+              "ok": false,
+              "tags": [
+                "regression",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 4121,
+                      "error": {
+                        "message": "Error: {\"billing_country\":[\"The billing_country does not match the entered address. The city does not belong to the selected country.\"]}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m422\u001b[39m",
+                        "stack": "Error: {\"billing_country\":[\"The billing_country does not match the entered address. The city does not belong to the selected country.\"]}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m422\u001b[39m\n    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\tests\\api\\auth-cart-invoice.spec.js:69:58)\n    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1644:9)\n    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:11)\n    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1642:7)",
+                        "location": {
+                          "file": "1)\\qa-ai-practical-assessment\\PrismStructure\\tests\\api\\auth-cart-invoice.spec.js",
+                          "column": 58,
+                          "line": 69
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "1)\\qa-ai-practical-assessment\\PrismStructure\\tests\\api\\auth-cart-invoice.spec.js",
+                            "column": 58,
+                            "line": 69
+                          },
+                          "message": "Error: {\"billing_country\":[\"The billing_country does not match the entered address. The city does not belong to the selected country.\"]}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m422\u001b[39m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\tests\\api\\auth-cart-invoice.spec.js:69:58)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1644:9)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:11)\u001b[22m\n\u001b[2m    at D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1642:7)\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:19.811Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\auth-cart-invoice-API-Regr-e58a4-h-a-bearer-token-regression-api\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\qa-ai-practical-assessment (1)\\qa-ai-practical-assessment\\PrismStructure\\test-results\\auth-cart-invoice-API-Regr-e58a4-h-a-bearer-token-regression-api\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "1)\\qa-ai-practical-assessment\\PrismStructure\\tests\\api\\auth-cart-invoice.spec.js",
+                        "column": 58,
+                        "line": 69
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "30003205f14100cbf40a-4b0b420f3e846382bf6a",
+              "file": "api/auth-cart-invoice.spec.js",
+              "line": 35,
+              "column": 3
+            },
+            {
+              "title": "TC-API-04 login with wrong password is rejected @regression",
+              "ok": true,
+              "tags": [
+                "regression",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 668,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:25.335Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "30003205f14100cbf40a-e55eb96b1814ac544648",
+              "file": "api/auth-cart-invoice.spec.js",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "TC-API-05 duplicate registration email is rejected @regression",
+              "ok": true,
+              "tags": [
+                "regression",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1383,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T17:14:26.072Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "30003205f14100cbf40a-ff5db91dfdef953f9341",
+              "file": "api/auth-cart-invoice.spec.js",
+              "line": 82,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-22T17:14:15.870Z",
+    "duration": 103784.845,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}
